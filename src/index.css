@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  .hover-nav {
+    transform: translate(-50%, -50%) scale(6);
+  }
+  .hover-menu-btn {
+    transform: translate(-50%, -50%) scale(5);
+  }
+  .hover-btn {
+    transform: translate(-50%, -50%) scale(7);
+  }
+}
