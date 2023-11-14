@@ -39,12 +39,16 @@ function App() {
   return (
     <>
       <Header cursorPointRef={cursorPointRef} />
-      <Home />
 
-      <div ref={cursorRef} className="cursor hidden md:block pointer-events-none fixed top-0 left-0 mix-blend-difference select-none z-[1000] transform duration-300">
+      <div className="controller__sections absolute top-0 left-0 w-full h-full">
+        <Home cursorPointRef={cursorPointRef} />
+      </div>
+
+
+      <div ref={cursorRef} className="cursor hidden md:block pointer-events-none absolute top-0 left-0 mix-blend-difference select-none z-[1000] transform duration-300 -translate-x-full -translate-y-full">
         <div
           ref={cursorPointRef}
-          className={`cursor__pointer p-1 lg:p-[0.275rem] xl:p-[0.3rem] bg-white rounded-[50%] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2`}
+          className={`cursor__pointer p-1 lg:p-[0.275rem] xl:p-[0.3rem] bg-white rounded-[50%] absolute top-1/2 left-1/2 transform transition-all duration-300 -translate-x-1/2 -translate-y-1/2`}
         />
       </div>
     </>

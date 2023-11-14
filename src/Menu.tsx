@@ -49,8 +49,8 @@ type Props = {
 
 const Menu = ({ toggle, cursorPointRef }: Props) => {
   return (
-    <section className={`bg-gray-200 w-full min-h-screen pt-14 sm:pt-24 pb-4 absolute top-0 left-0 right-0 px-8 md:px-12 lg:px-16 xl:px-20 2xl:px-24 transform duration-700 ease-in-out ${toggle ? "visible opacity-100 translate-y-0 rotate-0 skew-x-0" : "invisible opacity-0 -translate-y-full rotate-12 skew-x-12"}`}>
-      <div className="menu__view flex flex-row flex-1 items-center sm:gap-16 w-full min-h-[calc(100vh-132px)] sm:min-h-[calc(100vh-182px)]">
+    <section className={`bg-gray-200 w-full min-h-screen fixed inset-0 px-8 md:px-12 lg:px-16 xl:px-20 2xl:px-24 transform transition duration-700 ease-in-out ${toggle ? "visible opacity-100 translate-y-0 rotate-0 skew-x-0" : "invisible opacity-0 -translate-y-full rotate-12 skew-x-12"}`}>
+      <div className="menu__view flex flex-row flex-1 items-center sm:gap-16 w-full min-h-[calc(100vh-7.5rem)] sm:min-h-[calc(100vh-6.5rem)]">
 
         <div className="social__view w-1/2 sm:w-1/3 flex flex-col justify-center">
           <h1 className="text-gray-500 mb-2.5 md:text-lg">Social</h1>
