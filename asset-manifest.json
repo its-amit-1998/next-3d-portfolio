@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/next-3d-portfolio/static/css/main.43f1578e.css",
+    "main.js": "/next-3d-portfolio/static/js/main.cdb49f52.js",
+    "static/js/787.8fff0de6.chunk.js": "/next-3d-portfolio/static/js/787.8fff0de6.chunk.js",
+    "index.html": "/next-3d-portfolio/index.html",
+    "main.43f1578e.css.map": "/next-3d-portfolio/static/css/main.43f1578e.css.map",
+    "main.cdb49f52.js.map": "/next-3d-portfolio/static/js/main.cdb49f52.js.map",
+    "787.8fff0de6.chunk.js.map": "/next-3d-portfolio/static/js/787.8fff0de6.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.43f1578e.css",
+    "static/js/main.cdb49f52.js"
+  ]
+}
