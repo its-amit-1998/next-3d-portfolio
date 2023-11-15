@@ -7,6 +7,7 @@ type Props = {
 const Home = ({ cursorPointRef }: Props) => {
     const [isPageLoaded, setIsPageLoaded] = useState<boolean>(false);
     const [mouseCoordinateMove, setMouseCoordinateMove] = useState<boolean>(false);
+    const [playVideo, setPlayVidieo] = useState<boolean>(false);
 
     useEffect(() => {
         setIsPageLoaded(true);
@@ -36,8 +37,8 @@ const Home = ({ cursorPointRef }: Props) => {
             <div
                 style={{ transform: 'translate(0, 0px)' }}
                 className="section__inner relative w-full">
-                <div className="main px-4 md:px-36 py-20 md:py-44 bg-white max-h-screen !pb-0" id="home">
-                    <div className="main__content relative flex flex-col sm:flex-row justify-between w-full">
+                <div className="main py-20 md:py-44 bg-white min-h-screen !pb-0" id="home">
+                    <div className="main__content px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20 2xl:px-24 relative flex flex-col sm:flex-row justify-between w-full">
                         <div className="texts font-semibold md:font-medium font-serif w-full flex sm:flex-col justify-center">
                             <div className="title__mobile w-fit flex flex-col justify-center items-start sm:hidden text-xl">
                                 <span className={`transfrom duration-500 delay-0 ${isPageLoaded ? "opacity-100 translate-y-0 rotate-0" : "opacity-0 translate-y-1/2 rotate-3"}`}>Global design agency that</span>
@@ -53,14 +54,14 @@ const Home = ({ cursorPointRef }: Props) => {
                             <div className="main__row hidden sm:flex items-center pt-7">
                                 <div className="main__clutch  pr-16">
                                     <div className="clutch flex items-center">
-                                        <img src="./images/clutch.svg" alt="clutch" className="clutch__icon w-9" />
+                                        <img src="./next-3d-portfolio/images/clutch.svg" alt="clutch" className="clutch__icon w-9" />
                                         <div className="clutch__block pl-2.5">
                                             <div className="clutch__stars flex">
-                                                <img src="./images/star.svg" alt="star" className="overflow-clip over" />
-                                                <img src="./images/star.svg" alt="star" />
-                                                <img src="./images/star.svg" alt="star" />
-                                                <img src="./images/star.svg" alt="star" />
-                                                <img src="./images/star.svg" alt="star" />
+                                                <img src="./next-3d-portfolio/images/star.svg" alt="star" className="overflow-clip over" />
+                                                <img src="./next-3d-portfolio/images/star.svg" alt="star" className="overflow-clip over" />
+                                                <img src="./next-3d-portfolio/images/star.svg" alt="star" className="overflow-clip over" />
+                                                <img src="./next-3d-portfolio/images/star.svg" alt="star" className="overflow-clip over" />
+                                                <img src="./next-3d-portfolio/images/star.svg" alt="star" className="overflow-clip over" />
                                             </div>
                                             <p className="clutch__text text-black block font-medium mt-1">Rating 5, 24 reviews</p>
                                         </div>
@@ -73,7 +74,7 @@ const Home = ({ cursorPointRef }: Props) => {
                             </div>
                         </div>
 
-                        <div className="points hidden md:block">
+                        <div className="points hidden md:flex flex-col items-center">
                             <div className="eye animate-eye-animation">
                                 <svg width="133" height="130" viewBox="0 0 133 130" fill="none" xmlns="http://www.w3.org/2000/svg" className="-not-active">
                                     <rect className="eye-text animate-spin-slow duration-500 origin-center" x="0.355469" width="131.646" height="130" fill="url(#pattern-/images/text.webp)"></rect>
@@ -110,7 +111,7 @@ const Home = ({ cursorPointRef }: Props) => {
                                         <pattern id="pattern-/images/text.webp" patternContentUnits="objectBoundingBox" width="1" height="1">
                                             <use href="#/images/text.webp" transform="translate(0 -0.00132421) scale(0.000823723 0.00083415)"></use>
                                         </pattern>
-                                        <image id="/images/text.webp" width="1214" height="1202" href="./images/text.webp"></image>
+                                        <image id="/images/text.webp" width="1214" height="1202" href="./next-3d-portfolio/images/text.webp"></image>
                                     </defs>
                                 </svg>
                             </div>
@@ -127,21 +128,21 @@ const Home = ({ cursorPointRef }: Props) => {
                         </div>
                     </div>
 
-                    <div className="main__image mt-20 w-full">
-                        <div className="image">
-                            <div className="image-clip">
-                                <div className="image-sub" style={{ transform: "scale(1)" }}>
-                                    <div className="vimeo-main min-w-full">
-                                        <iframe title="qclay" className="vimeo-main-video" src="https://player.vimeo.com/video/821037821?h=5b0c8dac09?autoplay=1&amp;loop=1&amp;muted=1&amp;autopause=0&amp;background=1&amp;color=ffffff&amp;controls=2&amp;portrait=0" width="100%" height="100%" frameBorder={0} allow="autoplay; fullscreen; picture-in-picture; encrypted-media" allowFullScreen data-ready="true">
+                    <div className="main__image relative mt-20">
+                        <div className="image flex items-start w-screen h-screen  ">
+                            <div className={`image-clip ${isPageLoaded ? "max-h-screen" : "h-screen"} w-screen overflow-hidden`}>
+                                <div className="image-sub w-screen h-screen relative overflow-hidden" style={{ transform: "scale(.7)" }}>
+                                    <div className="vimeo-main w-full h-full relative">
+                                        <iframe title="nexTech3D" className="vimeo-main-video z-[2] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" src="https://player.vimeo.com/video/821037821?h=5b0c8dac09?autoplay=1&amp;loop=1&amp;muted=1&amp;autopause=0&amp;background=1&amp;color=ffffff&amp;controls=2&amp;portrait=0" width={window.innerWidth} height={window.innerWidth} allowFullScreen frameBorder={0} allow="autoplay; allowFullScreen; picture-in-picture; encrypted-media" style={{ display: playVideo ? "none" : "block" }} data-ready="true" >
                                         </iframe>
-                                        {/* <div className="vimeo-main-wrap">
-                                        </div> */}
-                                        {/* <iframe className="vimeo-main-wrap-video" title="QClay Showreel" src="https://player.vimeo.com/video/821037821?controls=true&amp;autoplay=false&amp;loop=true&amp;transparent=true&amp;autopause=false&amp;muted=false&amp;playsinline=false&amp;muted=1&amp;quality=720p" width="100%" height="100%" frameBorder="0" allow="autoplay; fullscreen; picture-in-picture; encrypted-media" allowFullScreen scrolling="no" style={{ opacity: 0 }} data-ready="true">
-                                        </iframe> */}
-                                        {/* <div className="vimeo-play-btn">
-                                            <div className="triangle">
-                                            </div>
-                                        </div> */}
+                                        <div className="vimeo-main-wrap cursor-pointer absolute top-0 left-0 w-full h-[calc(100%-150px)] z-[4]"
+                                            onClick={() => setPlayVidieo(true)} />
+                                        <iframe className={`vimeo-main-wrap-video ${playVideo ? "z-[6] opacity-100" : "z-[3] opacity-0"} !w-screen absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2`} title="nexTech3D reel" src={`https://player.vimeo.com/video/821037821?controls=true&autoplay=${playVideo ? "true" : "false"}&loop=true&transparent=true&autopause=false&muted=false&playsinline=true&muted=1&quality=720p`} width="100%" height="100%" frameBorder="0" allow="autoplay; fullscreen; picture-in-picture; encrypted-media" allowFullScreen scrolling="no" data-ready="true">
+                                        </iframe>
+                                        <div className="vimeo-play-btn flex justify-center items-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[5] bg-white border-[0.5px] border-black rounded-[50%] w-[70px] h-[70px]"
+                                            onClick={() => setPlayVidieo(true)} >
+                                            <div className="triangle border-y-[0.375rem] border-y-transparent border-l-[0.75rem] border-l-black transform translate-x-0.5 translate-y-0.5 opacity-50" />
+                                        </div>
                                     </div>
                                 </div>
                             </div>
