@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/next-3d-portfolio/static/css/main.a95186f7.css",
-    "main.js": "/next-3d-portfolio/static/js/main.69807d63.js",
+    "main.css": "/next-3d-portfolio/static/css/main.d971c0d5.css",
+    "main.js": "/next-3d-portfolio/static/js/main.df2a126d.js",
     "static/js/787.8fff0de6.chunk.js": "/next-3d-portfolio/static/js/787.8fff0de6.chunk.js",
     "index.html": "/next-3d-portfolio/index.html",
-    "main.a95186f7.css.map": "/next-3d-portfolio/static/css/main.a95186f7.css.map",
-    "main.69807d63.js.map": "/next-3d-portfolio/static/js/main.69807d63.js.map",
+    "main.d971c0d5.css.map": "/next-3d-portfolio/static/css/main.d971c0d5.css.map",
+    "main.df2a126d.js.map": "/next-3d-portfolio/static/js/main.df2a126d.js.map",
     "787.8fff0de6.chunk.js.map": "/next-3d-portfolio/static/js/787.8fff0de6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a95186f7.css",
-    "static/js/main.69807d63.js"
+    "static/css/main.d971c0d5.css",
+    "static/js/main.df2a126d.js"
   ]
 }
