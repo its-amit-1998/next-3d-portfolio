@@ -26,7 +26,7 @@ const Header = ({ cursorPointRef }: Props) => {
                     <div className="talk__btn relative flex flex-row gap-2 bg-[#F4EDED] rounded-full w-20 h-10 px-2  items-center">
                         <p className="header__talk__text text-black my-0 text-sm font-semibold">Hey!</p>
                         <div className="avatar flex items-center rounded-full w-8 h-8">
-                            <video className="video__component rounded-full" autoPlay={true} poster="../images/user.png" loop={true} playsInline={false} width="50" height="50">
+                            <video className="video__component rounded-full" autoPlay={true} poster="../next-3d-portfolio/images/user.png" loop={true} playsInline={false} width="50" height="50">
                                 <source src="/video/contact/ch.mp4" type="video/mp4" />
                             </video>
                         </div>

@@ -40,7 +40,7 @@ function App() {
     <>
       <Header cursorPointRef={cursorPointRef} />
 
-      <div className="controller__sections absolute top-0 left-0 w-full h-full no-scrollbar overflow-y-auto">
+      <div className="controller__sections absolute top-0 left-0 w-full h-full no-scrollbar overflow-y-auto isolate">
         <Home cursorPointRef={cursorPointRef} />
       </div>
 
