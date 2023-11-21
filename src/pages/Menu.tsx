@@ -75,7 +75,7 @@ const Menu = ({ toggle, cursorPointRef }: Props) => {
         </div>
 
         <div className="image__view hidden sm:block w-1/3">
-          <video className="video-component object-cover h-[20vh] md:h-[25vh] lg:h-[30vh] xl:h-[40vh] 2xl:h-[60vh] " autoPlay={true} poster="./images/poster_1.webp" loop={true} playsInline={false} width="338" height="476">
+          <video className="video-component object-cover h-[20vh] md:h-[25vh] lg:h-[30vh] xl:h-[40vh] 2xl:h-[60vh] " autoPlay={true} poster="./next-3d-portfolio/images/poster_1.webp" loop={true} playsInline={false} width="338" height="476">
             <source src="/video/menu/1.mp4" type="video/mp4" />
           </video>
         </div>

@@ -1,5 +1,5 @@
 import { RefObject, useState } from "react";
-import Menu from "../Menu";
+import Menu from "../pages/Menu";
 
 const headerLink = [
     { name: "Home", linkTo: "/" },
