@@ -13,10 +13,36 @@ import 'swiper/css/pagination';
 // import 'tailwindcss/tailwind.css';
 
 // import required modules
-import { Mousewheel } from 'swiper/modules';
+import { Mousewheel, Parallax } from 'swiper/modules';
 import About from "./pages/aboutUs/About";
 import CardView from "./pages/aboutUs/CardView";
 
+const cardViewDetails = [
+  {
+    backgroundColor: "rgb(247, 244, 244)",
+    image: "./next-3d-portfolio/images/1-poster.webp",
+    video: "./next-3d-portfolio/videos/1.mp4",
+    title: "We help our clients to shine online",
+    des: "We collaborate as a collective of individuals bringing their whole self to a project and, together, create work that none of us would be able to do on our own.",
+    number: "01"
+  },
+  {
+    backgroundColor: "rgb(239, 251, 249)",
+    image: "./next-3d-portfolio/images/2-poster.webp",
+    video: "./next-3d-portfolio/videos/2.mp4",
+    title: "We translate research into solutions",
+    des: "We offer a complete process from discovery, branding, design, launch to post-launch optimization and testing.",
+    number: "02"
+  },
+  {
+    backgroundColor: "rgb(242, 237, 244)",
+    image: "./next-3d-portfolio/images/3-poster.webp",
+    video: "./next-3d-portfolio/videos/3.mp4",
+    title: "Our team is very global",
+    des: "Our global team of researchers, strategists, creatives, and engineers work with streamlined processes to break through organizational roadblocks and shape the brands of tomorrow",
+    number: "03"
+  }
+]
 
 
 function App() {
@@ -118,27 +144,48 @@ function App() {
           </Swiper>
         </SwiperSlide>
         <SwiperSlide>
+          {({ isActive }) => (
+            <Swiper
+              className="w-full h-full mx-4"
+              direction={'vertical'}
+              slidesPerView={2.5}
+              spaceBetween={80}
+              mousewheel={{
+                invert: false,
 
-          <Swiper
-            className="w-full h-screen"
-            direction={'horizontal'}
-            slidesPerView={1}
-            spaceBetween={50}
-            mousewheel={{
-              invert: false,
-
-            }}
-            modules={[Mousewheel]}
-            nested
-          >
-            <SwiperSlide>
-              <About cursorPointRef={cursorPointRef} />
-            </SwiperSlide>
-            <SwiperSlide className="bg-red-500"><CardView /></SwiperSlide>
-            <SwiperSlide className="bg-green-500"><CardView /></SwiperSlide>
-            <SwiperSlide className="bg-blue-500"><CardView /></SwiperSlide>
-          </Swiper>
+              }}
+              breakpoints={{
+                // Responsive breakpoints
+                648: {
+                  // For tablets
+                  slidesPerView: 1.5,
+                  direction: "horizontal",
+                  spaceBetween: 5
+                },
+              }}
+              modules={[Mousewheel]}
+              nested
+            >
+              <SwiperSlide><About isActive={isActive} /> </SwiperSlide>
+              {cardViewDetails.map((item, index) => (
+                <SwiperSlide className={`md:pt-28 md:pb-7 px-4 ${cardViewDetails.length - 1 === index && "md:!pr-16"}`}>
+                  {({ isActive: acitve }) => (
+                    <CardView
+                      backgroundColor={item.backgroundColor}
+                      image={item.image}
+                      video={item.video}
+                      title={item.title}
+                      des={item.des}
+                      number={item.number}
+                      isActive={acitve}
+                    />
+                  )}
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          )}
         </SwiperSlide>
+
         <SwiperSlide> <Work /></SwiperSlide>
 
         <SwiperSlide> <ContactUs /> </SwiperSlide>

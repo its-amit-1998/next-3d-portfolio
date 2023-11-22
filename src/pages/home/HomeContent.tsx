@@ -33,15 +33,15 @@ const HomeContent = ({ cursorPointRef }: Props) => {
         <div className="main__content sm:py-20 md:pt-44 bg-white px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20 2xl:px-24 relative flex flex-col sm:flex-row justify-between items-center w-full">
             <div className="texts font-semibold md:font-medium font-serif w-full flex sm:flex-col justify-center">
                 <div className="title__mobile w-fit flex flex-col justify-center items-start sm:hidden text-xl">
-                    <span className={`transfrom duration-500 delay-0 ${isPageLoaded ? "opacity-100 translate-y-0 rotate-0" : "opacity-0 translate-y-1/2 rotate-3"}`}>Global design agency that</span>
-                    <span className={`transfrom  duration-500 delay-[50ms] ${isPageLoaded ? "opacity-100 translate-y-0 rotate-0" : "opacity-0 translate-y-1/2 rotate-3"}`}>creates holistic, well-balanced</span>
-                    <span className={`transfrom duration-500 delay-100 ${isPageLoaded ? "opacity-100 translate-y-0 rotate-0" : "opacity-0 translate-y-1/2 rotate-3"}`}>design solutions for inspiring</span>
-                    <span className={`transfrom duration-500 delay-150 ${isPageLoaded ? "opacity-100 translate-y-0 rotate-0" : "opacity-0 translate-y-1/2 rotate-3"}`}>brands</span>
+                    <span className={`transform duration-500 delay-0 ${isPageLoaded ? "opacity-100 translate-y-0 rotate-0" : "opacity-0 translate-y-1/2 rotate-3"}`}>Global design agency that</span>
+                    <span className={`transform  duration-500 delay-[50ms] ${isPageLoaded ? "opacity-100 translate-y-0 rotate-0" : "opacity-0 translate-y-1/2 rotate-3"}`}>creates holistic, well-balanced</span>
+                    <span className={`transform duration-500 delay-100 ${isPageLoaded ? "opacity-100 translate-y-0 rotate-0" : "opacity-0 translate-y-1/2 rotate-3"}`}>design solutions for inspiring</span>
+                    <span className={`transform duration-500 delay-150 ${isPageLoaded ? "opacity-100 translate-y-0 rotate-0" : "opacity-0 translate-y-1/2 rotate-3"}`}>brands</span>
                 </div>
-                <h1 className="title__desktop w-full hidden sm:flex flex-col justify-start items-start text-4xl">
-                    <span className={`transfrom duration-500 delay-0 ${isPageLoaded ? "opacity-100 translate-y-0 rotate-0" : "opacity-0 translate-y-1/2 rotate-3"}`}>Global design agency that creates</span>
-                    <span className={`transfrom duration-500 delay-[50ms] ${isPageLoaded ? "opacity-100 translate-y-0 rotate-0" : "opacity-0 translate-y-1/2 rotate-3"}`}>holistic, well-balanced design</span>
-                    <span className={`transfrom duration-500 delay-100 ${isPageLoaded ? "opacity-100 translate-y-0 rotate-0" : "opacity-0 translate-y-1/2 rotate-3"}`}>solutions for inspiring brands</span>
+                <h1 className="title__desktop w-full hidden sm:flex flex-col justify-start items-start text-6xl">
+                    <span className={`transform duration-500 delay-0 ${isPageLoaded ? "opacity-100 translate-y-0 rotate-0" : "opacity-0 translate-y-1/2 rotate-3"}`}>Global design agency that creates</span>
+                    <span className={`transform duration-500 delay-[50ms] ${isPageLoaded ? "opacity-100 translate-y-0 rotate-0" : "opacity-0 translate-y-1/2 rotate-3"}`}>holistic, well-balanced design</span>
+                    <span className={`transform duration-500 delay-100 ${isPageLoaded ? "opacity-100 translate-y-0 rotate-0" : "opacity-0 translate-y-1/2 rotate-3"}`}>solutions for inspiring brands</span>
                 </h1>
                 <div className="main__row hidden sm:flex items-center pt-7">
                     <div className="main__clutch pr-16">
